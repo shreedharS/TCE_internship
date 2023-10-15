@@ -1,28 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-    <title>Login Instagram</title>
-</head>
-<body>
-    <h1>Instagram</h1>
-    <input type=""placeholder="Phone number,username,or email">
-    <br>
-    <br>
-    <input type="" placeholder="password">
-    <br>
-    <br>
-    <button>Log in</button>
-    <br>
-
-    <br>
-    <a href="https://facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26locale%3Den_US%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26response_type%3Dcode%252Cgranted_scopes%26scope%3Demail%26state%3D%257B%2522fbLoginKey%2522%253A%2522q5mcognan6wc1qmitzl1mm2xlr1a597pcxx5lxrlej2mw1p0vexz%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Dfb3315eb-0311-471d-a0f8-9dfcaef20604%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%2522q5mcognan6wc1qmitzl1mm2xlr1a597pcxx5lxrlej2mw1p0vexz%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%23_%3D_&display=page&locale=en_GB&pl_dbl=0">Log in with Facebook</a>
-    <br>
-    <br>
-
-    <a href="https://www.instagram.com/accounts/password/reset/">forgot password?</a>
-    <br>
-    <br>
-    Don't have account? <a href="https://www.instagram.com/accounts/emailsignup/">Sign up</a>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Login</title>
+    <link rel="stylesheet" href="insta.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="center">
+        <div class="header">
+          <img src="data:image/png;base64,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" alt="instagramLogo" class="instaLogo" />
+        </div>
+        <div class="inputElement">
+          <input
+            type="text"
+            placeholder="Phone number,username or email"
+            class="inputText"
+          />
+          <input type="password" placeholder="Password" class="inputText" />
+          <input type="submit" value="Log in" class="inputButton" />
+          <div class="line">
+            <span class="arrow"></span>
+            <span class="content">OR</span>
+            <span class="arrow"></span>
+          </div>
+          <div class="social__icon">
+            <i class="fab fa-facebook-square"></i
+            ><span>Log in with facebook</span>
+          </div>
+          <div class="forgetPassword">Forget Password?</div>
+        </div>
+      </div>
+      <div class="footer">
+        <p>Don't have a accout?<span>Sign Up</span></p>
+      </div>
+    </div>
+  </body>
 </html>

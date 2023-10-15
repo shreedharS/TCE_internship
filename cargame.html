@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      margin: 0;
+      overflow: hidden;
+    }
+    
+    #car {
+      width: 50px;
+      height: 100px;
+      background-color: #333;
+      position: absolute;
+      bottom: 20px;
+      transition: 0.2s;
+    }
+  </style>
+</head>
+<body>
+  <div id="car"></div>
+
+  <script>
+    const car = document.getElementById('car');
+    let carPosition = 0;
+
+    // Move the car when arrow keys are pressed
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft' && carPosition > -100) {
+        carPosition -= 10;
+        car.style.left = carPosition + 'px';
+      }
+      if (event.key === 'ArrowRight' && carPosition < window.innerWidth - 50) {
+        carPosition += 10;
+        car.style.left = carPosition + 'px';
+      }
+    });
+
+    // Update the car's position on window resize
+    window.addEventListener('resize', () => {
+      if (carPosition > window.innerWidth - 50) {
+        carPosition = window.innerWidth - 50;
+        car.style.left = carPosition + 'px';
+      }
+    });
+  </script>
+</body>
+</html>
